@@ -29,6 +29,8 @@ Chaque étape doit être une branche git crée et chaque test unitaire un nouvea
 Vous pouvez modifier comme vous le souhaitez les fichiers, tant que les tests unitaire passe. (c'est même conseillé :D)
 Nous ne voulons pas que vous ajoutiez de librairie ( ex : lodash) pour vous aider dans ce projet
 
+`npm test` doit passer au vert.
+
 ## Chez Ubilab nous aimons :
 
 le code simple lisible et élégant
