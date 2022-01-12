@@ -40,7 +40,7 @@ describe('ResultService', () => {
     });
 
     it("devrait avoir une liste de 3 resultats non vue aprés l\'ajout de 3 resultat.", () => {
-      expect(false).toEqual(true);
+      expect(resultService.getAllResult().length).toEqual(3);
     });
 
     it("ne devrait pas authorisé l'ajout d'un résultats avec un id existent", () => {
