@@ -43,8 +43,9 @@ describe('ResultService', () => {
       expect(resultService.getAllResult().length).toEqual(3);
     });
 
-    it("ne devrait pas authorisé l'ajout d'un résultats avec un id existent", () => {
-      expect(false).toEqual(true);
+    it("ne devrait pas autoriser l'ajout d'un résultat avec un id existent", () => {
+      resultService.addResult({id: 64,idOwner:34,idRecipients:[99],isSeen:false,eventResults:[],contentOfResult:"Test"})
+      expect(resultService.getAllResult().length).toEqual(3);
     });
 
     it("devrait avoir 1 resultats vue dans la liste aprés la vision d\'un resultat", () => {

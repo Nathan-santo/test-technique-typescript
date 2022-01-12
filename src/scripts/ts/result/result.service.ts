@@ -9,6 +9,12 @@ export class ResultService {
    }
 
   public addResult(newResult:ResultModel) {
+    for (let pas = 0; pas < this.results.length; pas++) {
+      const result = this.results[pas];
+      if (result.id === newResult.id) {
+        return;
+      }
+    }
     this.results.push(newResult);
   }
 
