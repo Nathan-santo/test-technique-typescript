@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+
 <head>
-    <meta charset="UTF-8">
-    <title>Ubilab | Test technique front-end</title>
-    <link rel="icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <title>Ubilab | Test technique front-end</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 
 <body>
 
-<ul>
-    <li>Accueil</li>
-    <li>Nos Logiciels</li>
-    <li>Prix</li>
-    <li>Références</li>
-    <li>Tutoriels</li>
-</ul>
 
-<div id="page-1">
-    <i class="logo-ubilab">logo ubilab</i>
-</div>
-<div id="page-2">
-    <p>Au coeur des échanges entre
-        le laboratoire et les professionnels de santé.</p>
-</div>
-<script type="text/javascript" src="scripts/js/main.js"></script>
+  <header>
+    <nav>
+      <div class="boutton" type="button" onclick="openNav()">
+        <img src="assets/images/menu.png">
+      </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li class="active"><a href="#accueil" type="button" onclick="javascript:removeMenu()">Ac<span>cu</span>eil</a></li>
+          <li><a href="#noslogiciels" type="button" onclick="javascript:removeMenu()">Nos logiciels</a></li>
+          <li><a href="#prix" type="button" onclick="javascript:removeMenu()">Prix</a></li>
+          <li><a href="#references" type="button" onclick="javascript:removeMenu()">Références</a></li>
+          <li><a href="#tutoriels" type="button" onclick="javascript:removeMenu()">Tutoriels</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- BLOC 1 -->
+  <section id="bloc1">
+    <div class="logo-titre">
+      <img class="logo" src="assets/images/index-logoubilab-7D8A8BA2-CB53-4CE9-82FB-29B9B15F5905@2x.png" alt="Ubilab">
+      <h1>Ubilab</h1>
+    </div>
+    <div class="fleche">
+      <a href="#bloc2">
+        <img src="assets/images/fleche.png" alt="fleche">
+      </a>
+    </div>
+  </section>
+  <!-- BLOC 1 -->
+
+
+  <!-- BLOC 2 -->
+  <section id="bloc2">
+    <p>
+      Au coeur des échanges entre <br> le laboratoire et les professionnels de santé.
+    </p>
+    <div class="micro">
+      <img src="assets/images/index-illusgradient-DB44CF17-B2CE-4619-B824-59518A6A80C6@2x.png" alt="microscope">
+    </div>
+  </section>
+  <!-- BLOC 2 -->
+
+
+  <footer>
+    <div class="popup-info" onclick="javascript:popInfos()">
+      <img src="assets/images/messagerie.png" alt="Informations">
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="scripts/js/main.js"></script>
+
+
 </body>
+
+
 </html>

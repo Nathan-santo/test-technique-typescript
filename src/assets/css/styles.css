@@ -1,8 +1,288 @@
 body {
   margin: 0;
-}
-body > * {
-  box-sizing: border-box;
+  width: 100%;
 }
 
+/* body > * {
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+} */
+
 /*# sourceMappingURL=styles.css.map */
+
+* {
+  font-family: 'Cabin', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: #0aa4e6;
+  color: white;
+}
+
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 64px;
+  width: 100%;
+}
+
+.boutton {
+  display: none;
+  line-height: 18px;
+}
+
+.myNav .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  transition: all 0.5s;
+  z-index: 999;
+}
+
+.closebtn {
+  position: absolute;
+  font-size: 100px;
+  top: -20px;
+  right: 30px;
+  color: white;
+  font-weight: normal
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 18px;
+  margin: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav ul li a {
+  color: #c1c1c1;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  color: #515151;
+  transition: color 1s ease;
+}
+
+nav ul li.active a {
+  color: #515151;
+}
+
+nav ul li.active a:hover {
+  color: #515151;
+}
+
+nav ul li a span {
+  text-decoration: underline;
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* HEADER */
+
+
+/* BLOC 1 */
+#bloc1 {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.logo-titre {
+  display: flex;
+  align-items: center;
+}
+
+img.logo {
+  height: 240px;
+  width: 240px;
+}
+
+h1 {
+  color: #343434;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 700;
+  width: auto;
+  height: auto;
+}
+
+.fleche {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fleche img {
+  animation: down 1s infinite linear alternate;
+  width: 42px;
+  height: 17px;
+}
+
+/* BLOC 1 */
+
+
+/* BLOC 2 */
+#bloc2 {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(135deg, #90278E 0%, #00AEED 100%);
+  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.micro img {
+  display: flex;
+  width: 560px;
+  height: 440px;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-family: var(--font-family-cabin);
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 3%;
+}
+
+/* BLOC 2 */
+
+
+/* FOOTER */
+footer .popup-info {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  width: 10vh;
+  height: 10vh;
+  min-width: 45px;
+  min-height: 45px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+footer .popup-info img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+footer .popup-info img:hover {
+  transform: rotate(15deg);
+}
+
+footer .popup-info img:active {
+  transform: scale(0.9) rotate(15deg);
+}
+
+/* FOOTER */
+
+
+/* KEYFRAMES FLECHE */
+@keyframes down {
+  0% {
+    position: relative;
+    top: 0px;
+    opacity: 0.5
+  }
+
+  50% {
+    position: relative;
+    top: 10px;
+    opacity: 1
+  }
+
+  100% {
+    position: relative;
+    top: 20px;
+    opacity: 1
+  }
+
+}
+
+/* KEYFRAMES FLECHE */
+
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .boutton {
+    display: flex;
+    cursor: pointer;
+    margin-left: 60%;
+    height: 24px;
+    width: 24px;
+
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* BLOC 1 */
+  img.logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 32px;
+
+  }
+
+  img.fleche {
+    height: inherit;
+    width: inherit;
+  }
+
+  /* BLOC 1 */
+
+
+  /* BLOC 2 */
+  #bloc2 {
+    height: 45vh;
+  }
+
+  p {
+    font-size: 24px;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+  .micro img {
+    width: 266px;
+    height: 209px;
+    justify-content: flex-end;
+  }
+
+  /* BLOC 2 */
+}
+/* RESPONSIVE */
