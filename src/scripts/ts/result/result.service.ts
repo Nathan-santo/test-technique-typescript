@@ -13,7 +13,13 @@ export class ResultService {
   }
 
   public seenResult(idResult:number) {
-
+    for (let pas = 0; pas < this.results.length; pas++) {
+      const result = this.results[pas];
+      if (idResult === result.id) {
+        result.isSeen = true;
+      }
+      break
+    }
   }
 
   public unseenResult(idResult:number) {
@@ -25,7 +31,14 @@ export class ResultService {
   }
 
   public getAllResultSeen() : Array<ResultModel> {
-    return [];
+    const resultstrue = [];
+    for (let pas = 0; pas < this.results.length; pas++) {
+      const result = this.results[pas];
+      if (result.isSeen) {
+        resultstrue.push(result)
+      };
+    };
+    return resultstrue;
   }
 
   public getAllResultUnSeen() : Array<ResultModel> {
