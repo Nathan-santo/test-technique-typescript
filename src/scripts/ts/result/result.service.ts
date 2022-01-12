@@ -2,11 +2,14 @@ import { ResultModel } from './model/result.model';
 import { ResultEventModel } from './model/result-event.model';
 
 export class ResultService {
+  results: ResultModel[];
 
-  constructor() { }
+  constructor() {
+    this.results = [];
+   }
 
   public addResult(newResult:ResultModel) {
-
+    this.results.push(newResult);
   }
 
   public seenResult(idResult:number) {
@@ -18,7 +21,7 @@ export class ResultService {
   }
 
   public getAllResult() : Array<ResultModel> {
-    return [];
+    return this.results;
   }
 
   public getAllResultSeen() : Array<ResultModel> {
